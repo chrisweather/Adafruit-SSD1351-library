@@ -395,3 +395,8 @@ void Adafruit_SSD1351::setAddrWindow(uint16_t x1, uint16_t y1, uint16_t w,
 void Adafruit_SSD1351::enableDisplay(boolean enable) {
   sendCommand(enable ? SSD1351_CMD_DISPLAYON : SSD1351_CMD_DISPLAYOFF);
 }
+
+// Dim the display via CONTRASTMASTER 0-15
+void Adafruit_SSD1351::dim(uint8_t contrastlevel) {
+  sendCommand(SSD1351_CMD_CONTRASTMASTER, &contrastlevel, 1);
+}

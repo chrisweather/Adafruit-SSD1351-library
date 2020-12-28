@@ -99,6 +99,8 @@ public:
       invert(boolean i),        // For compatibility with old code
       enableDisplay(boolean enable),
       setAddrWindow(uint16_t x, uint16_t y, uint16_t w, uint16_t h);
+
+  void dim(uint8 contrastlevel = 15);  // Display contrast 0-15
 };
 
 #endif // _Adafruit_SSD1351_H_
